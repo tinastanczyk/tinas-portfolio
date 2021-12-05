@@ -1,0 +1,104 @@
+/* declaring my CSS variables in my :root pseudo class */
+:root{
+    --darkblue: #13293d;
+    --lightblue: #00ffff;
+    --white: #fef;
+}
+
+/* Setting the universal selector  */
+*{
+    font-size: 16px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+header{
+    display: grid;
+    /* Created a grid with 2 columns and 1 row */
+    grid-template-columns: 50% 50%;
+    background-color: var(--darkblue);
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* I'm giving the title of my header a background-color and proper alignment */
+header h1{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 250%;
+    align-self: center;
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+    margin-right: 187px;
+    padding-left: 63px;
+    padding-bottom: 4px;
+}
+/* I'm changing the unordered list to align horizontally instead of vertically */
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 36px;
+    margin-right: *;
+}
+
+header nav ul li{
+    /* removed the bullet points from the unordered list */
+    list-style-type: none;
+}
+ header nav ul li a{
+     /* removed the underline from the a tag links */
+     text-decoration: underline;
+     font-size: 150%;
+     color: var(--lightblue);
+     margin: 24px;
+ }
+
+ main{
+     display: flex;
+     flex-direction: column;
+     
+ }
+
+ main section{
+     display: grid;
+     /* Created a grid with the first column taking up 25% of the width and the second taking up the rest. */
+     grid-template-columns: 25% auto;
+     
+ }
+
+ main section h2{
+
+ }
+
+ main section .projects{
+     display: grid;
+     /* Created a grid with 2 columns and 4 rows*/
+     grid-template-columns: 50% 50%;
+     grid-template-rows: 25% 25% 25% 25%;
+ }
+
+ main section .projects a{
+     text-decoration: none;
+     text-align: center;
+     border: black 1px solid;
+ }
+
+ main section .projects #project-1{
+     /* I targeted the first project on my webpage.
+        I made the first project cover the first and second row and columns
+        of the grid, in order to make it larger than the rest of the projects. */
+     grid-column: 1 / 3;
+     grid-row: 1 / 3;
+    justify-content:center;
+ }
+
+ main section .projects .other-project{
+     justify-content: center;
+ }
