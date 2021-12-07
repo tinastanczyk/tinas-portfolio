@@ -25,6 +25,7 @@ body{
     flex-direction: column;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
+    width: 100%;
 }
 
 
@@ -56,7 +57,7 @@ header h1{
 header nav ul{
     display: flex;
     justify-content: flex-end;
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-right: 2rem;
 }
 
@@ -89,14 +90,6 @@ header nav ul li{
      
  }
 
- main section .articles{
-     display: grid;
-     /* Created a grid with 2 columns and 4 rows; */
-     grid-template-columns: 32rem 32rem;
-     grid-template-rows: 15rem 12rem 12rem 12rem;
-     position:  relative;
- } 
-
  /* Modifiers for my project's links */
  main section .articles a{
      display: block;
@@ -106,21 +99,6 @@ header nav ul li{
      border: var(--darkblue) 5px solid;
      background-size: cover;
      background-position: center;
- }
-
- main section .articles #project-1{
-     /* I targeted the first project on my webpage.
-        I made the first project cover the first and second row and columns
-        of the grid, in order to make it larger than the rest of the projects. */
-     grid-column: 1 / 3;
-     grid-row: 1 / 3;
-     display: flex;
-     justify-content: center;
- }
-
- main section .articles #project-2, main section .articles #project-3, main section .articles #project-4, main section .articles #project-5{
-    display: flex;
-    justify-content: center;
  }
 
  /* I put a background-image for my atags so when someone clicks on the 
@@ -148,29 +126,7 @@ header nav ul li{
     background-image: url("../images/project5-image.jpg");
  }
 
- /* Modifying the figcaption in my atag for the project links */
-main section .articles #project-1 .p1-label{
-    font-size: 150%;
-    margin-top: 8.7em;
-    margin-right: 20em;
-    padding: 1rem;
-    background-color: var(--darkmag);
-    /* border: var(--darkblue) 3px solid; */
-    border-top-right-radius: 1rem;
-    color: var(--yellow);
-}
 
- /* Modifying the figcaption in my atag for the project links */
-main section .articles .p2345-label{
-    font-size: 140%;
-    margin-top: 5.05em;
-    margin-right: 20rem;
-    padding: 1rem;
-    background-color: var(--yellow);
-    /* border: var(--darkblue) 3px solid; */
-    border-top-right-radius: 1rem;
-    color: var(--darkmag);
-}
 
 /* Added a background image to my first section of my portfolio */
 main .section-1{
@@ -185,52 +141,180 @@ main .section-1{
 }
 
 main .section-4{
-    margin-top: 5rem;
+    margin-top: 9vh;
 } 
 
+/* Adjusting my headshot image */
  main .section-1 img{
-    height: 22rem;
-    width: 22rem;
-    margin-top: 145px;
-    /* border: rgb(131, 22, 131, 0.3) 3px solid; */
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 90%;
+    /* margin-top: 145px; */
+    /* Border-radius set to 50% changes my image into a circle */
     border-radius: 50%;
-    margin-top: 17rem;
-    margin-right: 8rem;
+    /* margin-top: 46vh; */
+    /* margin-right: 15vw; */
+    /* padding-bottom: 8vh; */
+    /* padding-left: 25vw; */
     box-shadow: 0 0 20px 5px rgb(131 22 131 / 50%);
 }
 
+/* This is adjusting my subtitle next to my headshot */
 main .section-1 p{
     font-size: 150%;
     height: 2rem;
-    margin-top: 26rem;
-    margin-right: -10rem;
+    margin-top: 40vh;
+    margin-right: -10vw;
     background: linear-gradient(45deg, black, transparent);
     color: var(--yellow);
 }
 
+/* This formats the about me paragraph */
 main .section-2 p{
     text-align: start;
     margin-left: 3rem;
     margin-right: 7rem;
 }
 
-main section .contacts{
-    display: flex;
-    /* background-color: var(--lightblue); */
+main section .articles{
+    display: grid;
+    /* Created a grid with 2 columns and 4 rows; */
+    grid-template-columns: 32vw 32vw;
+    grid-template-rows: 15vh 12vh 12vh 12vh;
+    position:  relative;
+    justify-content: center;
 } 
 
+/* This modifies the color and size of the article's heading */
+main section .art-label{
+    text-align: center;
+    font-size: 200%;
+    color: var(--yellow);
+    margin-right: 3rem;
+    /* This adds a line to right of the heading of each article */
+    border-right: var(--white) 5px solid;
+}
+
+ /* Modifying the figcaption in my atag for the project links */
+ main section .articles #project-1 .p1-label{
+    font-size: 150%;
+    margin-top: 8.7em;
+    margin-right: 20em;
+    padding: 1rem;
+    background-color: var(--darkmag);
+    /* border: var(--darkblue) 3px solid; */
+    border-top-right-radius: 1rem;
+    color: var(--yellow);
+}
+
+ /* Modifying the figcaption in my atag for the project links */
+ main section .articles .p2345-label{
+    font-size: 140%;
+    margin-top: 5.05em;
+    margin-right: 20rem;
+    padding: 1rem;
+    background-color: var(--yellow);
+    border-top-right-radius: 1rem;
+    color: var(--darkmag);
+}
+
+/* This formats my contact links in a row */
+main section .contacts{
+    display: flex;
+    justify-content: center;
+    /* width: 72vw; */
+} 
+
+main section .articles #project-1{
+    /* I targeted the first project on my webpage.
+       I made the first project cover the first and second row and columns
+       of the grid, in order to make it larger than the rest of the projects. */
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+/* This further changes the color and size of my contact links */
 main .section-4 p, main .section-4 a{
-    margin: 4rem;
+    margin: 3vw;
     text-decoration: none;
     color: var(--yellow);
     font-size: 100%;
     font-weight: bold;
 }
 
-main section .art-label{
-    text-align: center;
-    font-size: 200%;
-    color: var(--yellow);
-    margin-right: 3rem;
-    border-right: var(--white) 5px solid;
-}
+main section .articles #project-2, main section .articles #project-3, main section .articles #project-4, main section .articles #project-5{
+    display: flex;
+    justify-content: center;
+ }
+
+
+ @media screen and (max-width: 768px){
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header h1 {
+        align-self: start;
+        color: var(--darkmag);
+        padding-left: 4rem;
+        padding-right: 1rem;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li a {
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-end;
+        background-color: black;
+        color: var(--darkmag);
+        margin-left: 35rem;
+        margin-right: -2rem;
+        padding-right: 2rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    main .section-1 img {
+        height: 18rem;
+        width: 18rem;
+    }
+    main .section-1 p {
+        margin-top: 0px;
+        margin-left: -66vw;
+    }
+    main .section-2 p {
+        margin-right: 3rem;
+    }
+
+    main section .articles {
+        grid-template-columns: 16rem 16rem;
+        grid-template-rows: 8rem 8rem 8rem 8rem;
+        position: relative;
+        justify-content: center;
+    }
+    main section .articles #project-1 .p1-label {
+        margin-top: 9.7rem;
+        margin-right: 0rem;
+        border-top-right-radius: 0rem;
+    }
+    main section .articles .p2345-label {
+        margin-top: 3.5rem;
+        margin-right: 0rem;
+        border-top-right-radius: 0rem;
+    }
+    main section .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+    main .section-4 p, main .section-4 a {
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+        background-color: var(--darkblue);
+        padding: 5%;
+        margin-right: 2rem;
+    }
+ }
