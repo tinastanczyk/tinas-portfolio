@@ -7,13 +7,9 @@ This project was created with the intention of building a professional portfolio
 - [Credits](#credits)
 - [License](#license)
 ## Installation
-Not Applicable
+[Link to Portfolio](https://tinastanczyk.github.io/tinas-portfolio)
 ## Usage
-Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![Screebshot of Webpage](assets/images/portfolio-screenshot.png)
 ## Credits
 Not Applicable
 ## License

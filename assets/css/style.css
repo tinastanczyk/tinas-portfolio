@@ -39,6 +39,23 @@ header{
     margin-right: -1rem;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    /* Set the background of my portfolio as a color gradient */
+    background: linear-gradient(0.25turn, var(--darkblue), var(--darkmag), var(--lightmag));
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: -1rem;
+}
+
+main section{
+    display: grid;
+    /* Created a grid with the first column taking up 25% of the width and the second taking up the rest. */
+    grid-template-columns: 25% auto;
+    max-width: 100%;
+}
+
 /* I'm giving the title of my header a background-color and proper alignment */
 header h1{
     display: flex;
@@ -84,67 +101,6 @@ header nav ul li a{
 header nav ul li a:hover{
     box-shadow: inset 0px 0px 8px black, 0 0 15px black;
 }
-
-main{
-    display: flex;
-    flex-direction: column;
-    /* Set the background of my portfolio as a color gradient */
-    background: linear-gradient(0.25turn, var(--darkblue), var(--darkmag), var(--lightmag));
-    margin-left: -1rem;
-    margin-right: -1rem;
-    margin-bottom: -1rem;
-}
-
-main section{
-    display: grid;
-    /* Created a grid with the first column taking up 25% of the width and the second taking up the rest. */
-    grid-template-columns: 25% auto;
-    max-width: 100%;
-}
-
-/* Modifiers for my project's links */
-main section .articles a{
-    width: 90%;
-    height: 90%;
-    text-decoration: none;
-    border: var(--darkblue) 5px solid;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    transition: all 0.5s ease-in-out;
- }
-
- /* When a user hovers over the project boxes they glow black */
- main section .articles a:hover{
-    box-shadow: inset 0px 0px 25px var(--darkblue), 0 0 25px var(--darkblue);
- }
-
- /* I put a background-image for my atags so when someone clicks on the 
- picture it will take them to the project link */
- main section .articles #project-1 a{
-    background-image: url("../images/project-1-image.jpg");
-    background-size:cover;
-    font-size: 150%;
- }
-
- main section .articles #project-2 a{
-    background-image: url("../images/project2-image.jpg");
- }
-
- main section .articles #project-3 a{
-    background-image: url("../images/project3-image.jpg");  
- }
-
- main section .articles #project-4 a{
-    background-image: url("../images/project4-image.jpg");
-    background-position: inherit;   
- }
-
- main section .articles #project-5 a{
-    background-image: url("../images/project5-image.jpg");
- }
 
 /* Added a background image to my first section of my portfolio */
 main .section-1{
@@ -200,22 +156,57 @@ main section .art-label{
     border-right: var(--white) 5px solid;
 }
 
-/* Modifying the figcaption in my atag for the project links */
-main section .articles #project-1 .p1-label{
-    font-size: 150%;
-    justify-content: f;
-    margin-right: 5vw;
-    padding: 1rem;
-    background-color: var(--darkmag);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    color: var(--yellow);
-}
+/* This formats my contact links in a row */
+main section .contacts{
+    display: flex;
+    justify-content: center;
+    /* width: 72vw; */
+} 
 
-/* When a user hovers over the project labels they grow, slightly, vertically */
-main section .articles #project-1 .p1-label:hover{
-    padding-top: 1.1rem;
-}
+/* Modifiers for my project's links */
+main section .articles a{
+    width: 90%;
+    height: 90%;
+    text-decoration: none;
+    border: var(--darkblue) 5px solid;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.5s ease-in-out;
+ }
+
+ /* When a user hovers over the project boxes they glow black */
+ main section .articles a:hover{
+    box-shadow: inset 0px 0px 25px var(--darkblue), 0 0 25px var(--darkblue);
+ }
+
+ /* I put a background-image for my atags so when someone clicks on the 
+ picture it will take them to the project link */
+ main section .articles #project-1 a{
+    background-image: url("../images/project-1-image.jpg");
+    background-size:cover;
+    font-size: 150%;
+ }
+
+ main section .articles #project-2 a{
+    background-image: url("../images/project2-image.jpg");
+ }
+
+ main section .articles #project-3 a{
+    background-image: url("../images/project3-image.jpg");  
+ }
+
+ main section .articles #project-4 a{
+    background-image: url("../images/project4-image.jpg");
+    background-position: inherit;   
+ }
+
+ main section .articles #project-5 a{
+    background-image: url("../images/project5-image.jpg");
+ }
+
 
 /* Modifying the figcaption in my atag for the project links */
 main section .articles .p2345-label{
@@ -233,12 +224,20 @@ main section .articles .p2345-label:hover{
     padding-top: 1.1rem;
 }
 
-/* This formats my contact links in a row */
-main section .contacts{
+/* This further changes the color and size of my contact links */
+main .section-4 p, main .section-4 a{
+    margin: 3vw;
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 100%;
+    font-weight: bold;
+}
+
+/* This flexes all elements of my projects in a vertical direction */
+main section .articles #project-2, main section .articles #project-3, main section .articles #project-4, main section .articles #project-5{
     display: flex;
     justify-content: center;
-    /* width: 72vw; */
-} 
+}
 
 main section .articles #project-1{
     /* I targeted the first project on my webpage.
@@ -250,19 +249,23 @@ main section .articles #project-1{
     justify-content: center;
 }
 
-/* This further changes the color and size of my contact links */
-main .section-4 p, main .section-4 a{
-    margin: 3vw;
-    text-decoration: none;
+/* Modifying the figcaption in my atag for the project links */
+main section .articles #project-1 .p1-label{
+    font-size: 150%;
+    justify-content: f;
+    margin-right: 5vw;
+    padding: 1rem;
+    background-color: var(--darkmag);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     color: var(--yellow);
-    font-size: 100%;
-    font-weight: bold;
 }
 
-main section .articles #project-2, main section .articles #project-3, main section .articles #project-4, main section .articles #project-5{
-    display: flex;
-    justify-content: center;
+/* When a user hovers over the project labels they grow, slightly, vertically */
+main section .articles #project-1 .p1-label:hover{
+    padding-top: 1.1rem;
 }
+
 
 /* My portfolio switches to this type of view when used with an iPad. */
 @media screen and (max-width: 768px){
@@ -303,29 +306,6 @@ main section .articles #project-2, main section .articles #project-3, main secti
     main .section-2 p {
         margin-right: 3rem;
     }
-    main section .articles {
-        grid-template-columns: 16rem 16rem;
-        grid-template-rows: 8rem 8rem 8rem 8rem;
-        position: relative;
-        justify-content: center;
-        max-width: 100%;
-    }
-    main section .articles #project-1 .p1-label {
-        margin-top: 9.7rem;
-        margin-right: 0rem;
-        border-top-right-radius: 0rem;
-        border-bottom-right-radius: 0rem;
-    }
-    main section .articles .p2345-label {
-        margin-top: 3.5rem;
-        margin-right: 0rem;
-        border-top-right-radius: 0rem;
-        border-bottom-right-radius: 0rem;
-    }
-    main section .contacts {
-        display: flex;
-        flex-direction: column;
-    }
     main .section-4 p, main .section-4 a {
         margin: 1rem;
         display: flex;
@@ -333,6 +313,29 @@ main section .articles #project-2, main section .articles #project-3, main secti
         background-color: var(--darkblue);
         padding: 5%;
         margin-right: 2rem;
+    }
+    main section .articles {
+        grid-template-columns: 16rem 16rem;
+        grid-template-rows: 8rem 8rem 8rem 8rem;
+        position: relative;
+        justify-content: center;
+        max-width: 100%;
+    }
+    main section .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+    main section .articles .p2345-label {
+        margin-top: 3.5rem;
+        margin-right: 0rem;
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+    } 
+    main section .articles #project-1 .p1-label {
+        margin-top: 9.7rem;
+        margin-right: 0rem;
+        border-top-right-radius: 0rem;
+        border-bottom-right-radius: 0rem;
     }
 }
 
@@ -363,6 +366,7 @@ main section .articles #project-2, main section .articles #project-3, main secti
         grid-template-columns: auto;
         margin: 2rem;
         height: 100vh;
+        max-width: 100%;
     }
     header nav ul li{
         display: flex;
@@ -376,9 +380,6 @@ main section .articles #project-2, main section .articles #project-3, main secti
         padding: 2rem;
         border-radius: 1rem;
     }
-    main section{
-        max-width: 100%;
-    }
     main .section-1 {
         height: 100vh;
         width: auto;
@@ -391,6 +392,17 @@ main section .articles #project-2, main section .articles #project-3, main secti
         height: 100vh;
         margin-top: -43px;
     }
+    main section .contacts {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        height: 100%;
+    }
+    main section .art-label {
+        text-decoration: underline;
+        margin-right: 0rem;
+        border-right: none;
+    }
     main section .articles a {
         display: block;
         background-size: cover;
@@ -398,27 +410,16 @@ main section .articles #project-2, main section .articles #project-3, main secti
         flex-direction: column;
         justify-content: flex-end;
     }
-    main section .articles #project-1 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-        display: flex;
-        justify-content: center;
-    }
-    main section .art-label {
-        text-decoration: underline;
-        margin-right: 0rem;
-        border-right: none;
-    }
     main .section-4 p, main .section-4 a {
         justify-content: center;
         margin-left: 3rem;
         margin-right: 3rem;
         text-decoration: none;
     }
-    main section .contacts {
+    main section .articles #project-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
         display: flex;
-        flex-direction: column;
-        margin-top: 0px;
-        height: 100%;
+        justify-content: center;
     }
 }
