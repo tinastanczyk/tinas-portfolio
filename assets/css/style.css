@@ -177,6 +177,11 @@ main section .articles a{
     transition: all 0.5s ease-in-out;
  }
 
+ main .section-3 article{
+     display: flex;
+     flex-direction: column;
+ }
+
  /* When a user hovers over the project boxes they glow black */
  main section .articles a:hover{
     box-shadow: inset 0px 0px 25px var(--darkblue), 0 0 25px var(--darkblue);
@@ -185,7 +190,7 @@ main section .articles a{
  /* I put a background-image for my atags so when someone clicks on the 
  picture it will take them to the project link */
  main section .articles #project-1 a{
-    background-image: url("../images/project-1-image.jpg");
+    background-image: url("../images/movie-hype-generator.png");
     background-size:cover;
     font-size: 150%;
  }
