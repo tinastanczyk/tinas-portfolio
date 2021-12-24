@@ -1,11 +1,11 @@
 /* declaring my CSS variables in my :root pseudo class */
 :root{
-    --darkblue: #0b385e;
+    --darkblue: #041422;
     --lightblue: #00ffff;
     --white: #fef;
-    --yellow: #a7bb3d;
-    --lightmag: rgb(138, 57, 138);
-    --darkmag: rgb(106, 1, 155);
+    --yellow: #a9b75f;
+    --lightmag: rgb(66 28 66);
+    --darkmag: rgb(50 1 155);
 }
 
 /* Setting the universal selector  */
@@ -33,7 +33,7 @@ header{
     display: grid;
     /* Created a grid with 2 columns and 1 row */
     grid-template-columns: 50% 50%;
-    background: linear-gradient(0.25turn, var(--darkblue), var(--darkmag), var(--lightmag));
+    background: linear-gradient(0.25turn, black 25%, var(--darkmag), var(--lightmag));
     margin-top: -1rem;
     margin-left: -1rem;
     margin-right: -1rem;
@@ -43,7 +43,7 @@ main{
     display: flex;
     flex-direction: column;
     /* Set the background of my portfolio as a color gradient */
-    background: linear-gradient(0.25turn, var(--darkblue), var(--darkmag), var(--lightmag));
+    background: linear-gradient(0.25turn, black, var(--darkmag), var(--lightmag));
     margin-left: -1rem;
     margin-right: -1rem;
     margin-bottom: -1rem;
@@ -63,8 +63,9 @@ header h1{
     justify-content: flex-start;
     font-size: 250%;
     align-self: center;
-    background: black;
-    color: var(--darkmag);
+    background: linear-gradient(45deg, black, transparent);
+    color: var(
+    --darkmag);
     margin-right: 5vw;
     padding-left: 9rem;
     padding-bottom: 0.5rem;
@@ -91,7 +92,7 @@ header nav ul li a{
     display: block;
     text-decoration: underline;
     font-size: 150%;
-    color: black;
+    color: var(--white);
     margin: 1rem;
     padding: 8px;
     text-align: center;
@@ -111,22 +112,25 @@ main .section-1{
     height: auto;
     width: 100%;
     background-image: url("../images/background-image-1.jpg");
-    background-size: cover;
-    background-position: center;
+    background-size: 177%;
+    background-position-y: 64%;
+    background-position-x: right;
 }
 
 main .section-4{
-    /* margin-top: 72vh; */
+    margin-top: 14vh;
 } 
 
 /* Adjusting my headshot image */
 main .section-1 img{
-    height: 20rem;
+    height: 20vw;
     width: auto;
-    max-width: 100%;
-    max-height: 77%;
-    margin: 8vh;
+    max-width: auto;
+    max-height: 50%;
+    margin: 4vh;
     /* Border-radius set to 50% changes my image into a circle */
+    margin-left: 3vw;
+    margin-top: 2vh;
     border-radius: 50%;
     box-shadow: 0 0 20px 5px rgb(131 22 131 / 50%);
 }
@@ -138,7 +142,9 @@ main .section-2 p{
     margin-right: 0vw;
     padding-left: 5vw;
     /* This adds a line to right of the heading of each article */
-    border-left: var(--white) 5px solid;
+    padding-bottom: 5vw;
+    border-left: black 5px solid;
+    margin-bottom: 15vh;
 }
 
 main section .articles{
@@ -150,14 +156,15 @@ main section .articles{
     justify-content: center;
     gap: 3vw;
     /* This adds a line to right of the heading of each article */
-    border-left: var(--white) 5px solid;
+    padding-bottom: 4vw;
+    border-left: black 5px solid;
 } 
 
 /* This modifies the color and size of the article's heading */
 main section .art-label{
     text-align: center;
     font-size: 200%;
-    color: var(--yellow);
+    color: var(--white);
     /* margin-right: 0vw; */
     padding: 1vw;
     /* margin-top: -2vh; */
@@ -169,7 +176,7 @@ main section .contacts{
     justify-content: center;
     /* width: 72vw; */
     /* This adds a line to right of the heading of each article */
-    border-left: var(--white) 5px solid;
+    border-left: black 5px solid;
 } 
 
 /* Modifiers for my project's links */
@@ -177,7 +184,7 @@ main section .articles a{
     width: 90%;
     height: 90%;
     text-decoration: none;
-    border: var(--darkblue) 5px solid;
+    border: black 5px solid;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -193,7 +200,7 @@ main section .articles a{
 
  /* When a user hovers over the project boxes they glow black */
  main section .articles a:hover{
-    box-shadow: inset 0px 0px 25px var(--darkblue), 0 0 25px var(--darkblue);
+    box-shadow: inset 0px 0px 10px var(--yellow), 0 0 25px black;
  }
 
  /* I put a background-image for my atags so when someone clicks on the 
@@ -202,47 +209,54 @@ main section .articles a{
     background-image: url("../images/movie-hype-generator.png");
     background-size:cover;
     font-size: 150%;
+    background-position: top;
     /* display: flex; */
     /* flex-direction: column; */
  }
 
  main section .articles #project-2 a{
     background-image: url("../images/weather-screenshot.png");
+    background-position: top;
  }
 
  main section .articles #project-3 a{
-    background-image: url("../images/quiz-screenshot.png");  
+    background-image: url("../images/quiz-screenshot.png");
+    background-position: top;  
  }
 
  main section .articles #project-4 a{
     background-image: url("../images/planner-screenshot.png");
-    background-position: inherit;   
+    background-position: top;
  }
 
  main section .articles #project-5 a{
     background-image: url("../images/passwordgen-screenshot.png");
+    background-position: top;
  }
 
  main section .articles #project-1 #gitHub-1, main section .articles #project-2 #gitHub-2, main section .articles #project-3 #gitHub-3, main section .articles #project-4 #gitHub-4, main section .articles #project-5 #gitHub-5{
     background-image: url("../images/github-logo.png");
     background-size: 110%;
+    background-position: center;
  }
 
 
 /* Modifying the figcaption in my atag for the project links */
 main section .articles .p2345-label{
     font-size: 80%;
-    margin-right: 13vw;
-    padding: 1vw;
-    background-color: var(--yellow);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    color: var(--darkmag);
+    margin-right: 14vw;
+    padding: 0.5vw;
+    background-color: black;
+    border-top-right-radius: 0.5vw;
+    /* border-bottom-right-radius: 1rem; */
+    color: var(--white);
 }
 
 /* When a user hovers over the project labels they grow, slightly, vertically */
 main section .articles .p2345-label:hover{
-    padding-top: 1.1rem;
+    /* padding-top: 1.1rem; */
+    /* background-color: black; */
+    color: var(--yellow);
 }
 
 /* This further changes the color and size of my contact links */
@@ -258,6 +272,7 @@ main .section-4 p, main .section-4 a{
 main section .articles #project-2, main section .articles #project-3, main section .articles #project-4, main section .articles #project-5{
     display: flex;
     justify-content: center;
+    align-items: center;
     /* margin: auto; */
 }
 
@@ -278,15 +293,17 @@ main section .articles #project-1 .p1-label{
     justify-content: f;
     margin-right: 37vw;
     padding: 1vw;
-    background-color: var(--darkmag);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    color: var(--yellow);
+    background-color: black;
+    border-top-right-radius: 0.5vw;
+    /* border-bottom-right-radius: 0; */
+    color: var(--white);
 }
 
 /* When a user hovers over the project labels they grow, slightly, vertically */
 main section .articles #project-1 .p1-label:hover{
-    padding-top: 1.1rem;
+    /* padding-top: 1.1rem; */
+    /* background-color: var(--lightmag); */
+    color: var(--yellow);
 }
 
 
@@ -306,6 +323,9 @@ main section .articles #project-1 .p1-label:hover{
         padding-right: 1rem;
         margin-right: 0rem;
     }
+    header nav{
+        margin-top: -5vw;
+    }
     header nav ul {
         flex-direction: column;
     }
@@ -321,9 +341,14 @@ main section .articles #project-1 .p1-label:hover{
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
     }
+    main section {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
     main .section-1 img {
-        height: 18rem;
-        width: 18rem;
+        height: 59vw;
+        width: 59vw;
     }
     main .section-1 p {
         margin-top: 0px;
@@ -331,28 +356,34 @@ main section .articles #project-1 .p1-label:hover{
     }
     main .section-2 p {
         /* margin-right: 3rem; */
-        margin-top: -52vh;
+        margin-top: 0vh;
     }
     main .section-1{
         margin-top: 0vh;
+        /* height: 69%; */
+        /* padding-bottom: 0vw; */
     }
     main .section-2{
-        margin-top: 66vh;
+        margin-top: 10vh;
+        padding: 6vh;
     }
     main .section-2 h2{
-        margin-top: -52vh;
+        margin-top: 0vh;
         padding: 1vh;
     }
 
-    main .section-3{margin-top: 77vh;}
+    main .section-3{margin-top: 77vh;display: flex;flex-direction: c;}
     main .section-3 h2{
-        margin-top: -5vh;
-        padding: 1vh;
+        margin-top: -1vh;
+        padding: 5vh;
         max-height: 42vh;
         /* border-right: none; */
     }
     main section .articles #project-1{
         margin-top: -7vh;
+        display: flex;
+        justify-content: center;
+        align-items: c;
         /* margin-bottom: -5vh; */
     }
     main section .articles #project-1 a{
@@ -363,6 +394,7 @@ main section .articles #project-1 .p1-label:hover{
     }
     main .section-4{
         margin-top: 18vh;
+        margin-bottom: 18vh;
     }
     main .section-4 p, main .section-4 a {
         margin: 1rem;
@@ -373,18 +405,24 @@ main section .articles #project-1 .p1-label:hover{
         margin-right: 2rem;
     }
     main section .articles {
-        grid-template-columns: 16rem 16rem;
-        grid-template-rows: 8rem 8rem 8rem 8rem;
-        position: relative;
+        /* grid-template-columns: 16rem 16rem; */
+        /* grid-template-rows: 8rem 8rem 8rem 8rem; */
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         max-width: 100%;
-        row-gap: 10vh;
+        row-gap: 5vh;
+        padding-top: 5vw;
+        padding-bottom: 9vw;
         /* border-left: var(--white) 5px solid; */
         /* max-height: 86vh; */
     }
     main section .contacts {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: c;
     }
     main section .articles .p2345-label {
         margin-top: 3.5rem;
