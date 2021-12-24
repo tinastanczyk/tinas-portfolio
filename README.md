@@ -9,7 +9,7 @@ This project was created with the intention of building a professional portfolio
 ## Installation
 [Link to Portfolio](https://tinastanczyk.github.io/tinas-portfolio)
 ## Usage
-![Screebshot of Webpage](assets/images/portfolio-screenshot.png)
+![Screebshot of Webpage](assets/images/updated-portfolio-screenshot.png)
 ## Credits
 Not Applicable
 ## License
