@@ -13,6 +13,8 @@
     font-size: 16px;
     padding: 0px;
     color: var(--white);
+    max-height: 100%;
+    
 }
 
 /* Added 'scroll-behavior' to make links scroll smooth when clicked, instead of jumping. */
@@ -25,7 +27,7 @@ body{
     flex-direction: column;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
-    max-width: 100%;
+    max-width: 100vw;
 }
 
 
@@ -294,6 +296,8 @@ main section .articles #project-1 .p1-label{
     header {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        padding: 0;
     }
     main{
         max-height: fit-content;
@@ -309,9 +313,12 @@ main section .articles #project-1 .p1-label{
     }
     header nav{
         margin-top: -5vw;
+        margin-right: 32px;
     }
     header nav ul {
         flex-direction: column;
+        margin-top: 0rem;
+        margin-right: 0rem;
     }
     header nav ul li a {
         text-decoration: none;
@@ -345,7 +352,7 @@ main section .articles #project-1 .p1-label{
     }
     main .section-1{
         margin-top: 0vh;
-        background-size: 219%;
+        background-size: 226%;
         background-position-y: 6%;
         background-position-x: left;
     }
@@ -428,7 +435,7 @@ main section .articles #project-1 .p1-label{
         display:  flex;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        max-height: 100%;
         width: auto;
         background: linear-gradient(
 0.25turn, black 5%, var(--darkmag), var(--lightmag));
@@ -439,12 +446,16 @@ main section .articles #project-1 .p1-label{
         font-size: 211%;
         margin-right: 0;
         padding: 10vw;
+        margin-bottom: 0rem;
     }
     header nav{
         display: flex;
         text-align: center;
         justify-content: center;
         align-items: center;
+        max-height: 100%;
+        height: 100vh;
+        padding-top: 0vw;
     }
     main section {
         grid-template-columns: auto;
@@ -461,7 +472,7 @@ main section .articles #project-1 .p1-label{
         text-align: center;
         margin-left: 0rem;
         margin-right: 0rem;
-        padding: 2rem;
+        padding: 10vw;
         border-radius: 1rem;
     }
     main .section-1 {
@@ -516,8 +527,8 @@ main section .articles #project-1 .p1-label{
     }
     main .section-4 p, main .section-4 a {
         justify-content: center;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
         text-decoration: none;
     }
     main section .articles #project-1 {
