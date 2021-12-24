@@ -53,8 +53,6 @@ main section{
     display: grid;
     /* Created a grid with the first column taking up 25% of the width and the second taking up the rest. */
     grid-template-columns: 25% auto;
-    /* max-height: 100%; */
-    /* max-width: 100%; */
 }
 
 /* I'm giving the title of my header a background-color and proper alignment */
@@ -152,12 +150,12 @@ main section .articles{
     /* Created a grid with 2 columns and 4 rows; */
     grid-template-columns: 25vw 25vw;
     grid-template-rows: 40vh 40vh 40vh 40vh;
-    /* position:  relative; */
     justify-content: center;
     gap: 3vw;
     /* This adds a line to right of the heading of each article */
     padding-bottom: 4vw;
     border-left: black 5px solid;
+    padding-top: 4vw;
 } 
 
 /* This modifies the color and size of the article's heading */
@@ -165,18 +163,16 @@ main section .art-label{
     text-align: center;
     font-size: 200%;
     color: var(--white);
-    /* margin-right: 0vw; */
     padding: 1vw;
-    /* margin-top: -2vh; */
 }
 
 /* This formats my contact links in a row */
 main section .contacts{
     display: flex;
     justify-content: center;
-    /* width: 72vw; */
     /* This adds a line to right of the heading of each article */
     border-left: black 5px solid;
+    padding-top: 2vw;
 } 
 
 /* Modifiers for my project's links */
@@ -210,8 +206,6 @@ main section .articles a{
     background-size:cover;
     font-size: 150%;
     background-position: top;
-    /* display: flex; */
-    /* flex-direction: column; */
  }
 
  main section .articles #project-2 a{
@@ -248,14 +242,11 @@ main section .articles .p2345-label{
     padding: 0.5vw;
     background-color: black;
     border-top-right-radius: 0.5vw;
-    /* border-bottom-right-radius: 1rem; */
     color: var(--white);
 }
 
-/* When a user hovers over the project labels they grow, slightly, vertically */
-main section .articles .p2345-label:hover{
-    /* padding-top: 1.1rem; */
-    /* background-color: black; */
+/* When a user hovers over the project labels they glow yellow and black*/
+main section .articles #project-1 .p1-label:hover, main section .articles .p2345-label:hover{
     color: var(--yellow);
 }
 
@@ -273,7 +264,6 @@ main section .articles #project-2, main section .articles #project-3, main secti
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
 }
 
 main section .articles #project-1{
@@ -285,6 +275,7 @@ main section .articles #project-1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 /* Modifying the figcaption in my atag for the project links */
@@ -295,17 +286,8 @@ main section .articles #project-1 .p1-label{
     padding: 1vw;
     background-color: black;
     border-top-right-radius: 0.5vw;
-    /* border-bottom-right-radius: 0; */
     color: var(--white);
 }
-
-/* When a user hovers over the project labels they grow, slightly, vertically */
-main section .articles #project-1 .p1-label:hover{
-    /* padding-top: 1.1rem; */
-    /* background-color: var(--lightmag); */
-    color: var(--yellow);
-}
-
 
 /* My portfolio switches to this type of view when used with an iPad. */
 @media screen and (max-width: 768px){
@@ -315,6 +297,8 @@ main section .articles #project-1 .p1-label:hover{
     }
     main{
         max-height: fit-content;
+        background: linear-gradient(
+0.25turn, black 15%, var(--darkmag), var(--lightmag));
     }
     header h1 {
         align-self: start;
@@ -347,21 +331,23 @@ main section .articles #project-1 .p1-label:hover{
         max-width: 100%;
     }
     main .section-1 img {
-        height: 59vw;
-        width: 59vw;
+        height: 47vw;
+        width: 47vw;
+        margin-top: 87vw;
+        margin-left: 30vw;
     }
     main .section-1 p {
         margin-top: 0px;
         margin-left: -66vw;
     }
     main .section-2 p {
-        /* margin-right: 3rem; */
         margin-top: 0vh;
     }
     main .section-1{
         margin-top: 0vh;
-        /* height: 69%; */
-        /* padding-bottom: 0vw; */
+        background-size: 219%;
+        background-position-y: 6%;
+        background-position-x: left;
     }
     main .section-2{
         margin-top: 10vh;
@@ -377,14 +363,12 @@ main section .articles #project-1 .p1-label:hover{
         margin-top: -1vh;
         padding: 5vh;
         max-height: 42vh;
-        /* border-right: none; */
     }
     main section .articles #project-1{
         margin-top: -7vh;
         display: flex;
         justify-content: center;
-        align-items: c;
-        /* margin-bottom: -5vh; */
+        align-items: center;
     }
     main section .articles #project-1 a{
         max-height: 15vh;
@@ -405,9 +389,6 @@ main section .articles #project-1 .p1-label:hover{
         margin-right: 2rem;
     }
     main section .articles {
-        /* grid-template-columns: 16rem 16rem; */
-        /* grid-template-rows: 8rem 8rem 8rem 8rem; */
-        /* position: relative; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -415,14 +396,14 @@ main section .articles #project-1 .p1-label:hover{
         row-gap: 5vh;
         padding-top: 5vw;
         padding-bottom: 9vw;
-        /* border-left: var(--white) 5px solid; */
-        /* max-height: 86vh; */
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
     main section .contacts {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: c;
+        align-items: center;
     }
     main section .articles .p2345-label {
         margin-top: 3.5rem;
@@ -439,9 +420,8 @@ main section .articles #project-1 .p1-label:hover{
 }
 
 /* My portfolio switches to this type of view when used with a Pixel 2XL */
-@media screen and (max-width: 411px){
+@media screen and (max-width: 414px){
     body {
-        width: 100%;
         margin:  0px;
     }
     header{
@@ -450,16 +430,21 @@ main section .articles #project-1 .p1-label:hover{
         justify-content: center;
         height: 100vh;
         width: auto;
+        background: linear-gradient(
+0.25turn, black 5%, var(--darkmag), var(--lightmag));
     }
     header h1 {
-        display: block;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         font-size: 211%;
         margin-right: 0;
+        padding: 10vw;
     }
     header nav{
-        display: block;
+        display: flex;
         text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     main section {
         grid-template-columns: auto;
@@ -483,31 +468,44 @@ main section .articles #project-1 .p1-label:hover{
         height: 100vh;
         width: auto;
         margin: 0px;
+        background-size: 267%;
+        background-position-y: 51%;
+        background-position-x: left;
+    }
+    main .section-2{
+        margin-bottom: 0vw;
+    }
+    main .section-2 p{
+        border: none;
     }
     main .section-3{
         margin-top: 64vh;
+        padding: 0vw;
+        margin-top: 0vw;
     }
     main .section-4{
-        margin-top: 107vh;
+        margin-top: 166vw;
+        margin-bottom: 0vw;
     }
     main section .articles{
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 100vh;
-        margin-top: -43px;
+        margin-top: 52vw;
+        border: none;
     }
     main section .contacts {
         display: flex;
         flex-direction: column;
-        margin-top: -48vh;
+        margin-top: -26vh;
         height: 100%;
+        border: none;
+        margin-bottom: 0vw;
+        padding-bottom: 0vw;
     }
     main section .art-label {
         text-decoration: underline;
-        margin-right: 0rem;
-        border-right: none;
-        /* margin-top: -77vh; */
     }
     main section .articles a {
         display: block;
