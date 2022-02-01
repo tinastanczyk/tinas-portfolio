@@ -35,6 +35,9 @@
     </header>
 
     <main>
+        <div class="parallax-container">
+            <div class="parallax"><img style = "height: auto; width: 100%;" src="assets/images/background-image-1.jpg"></div>
+        </div>
         <!-- This section is for my picture and subtitle -->
         <section class="section-1">
             <!-- Adding my professional photo here. -->
@@ -55,6 +58,9 @@
             </p>
 
         </section>
+        <div class="parallax-container">
+            <div class="parallax"><img style = "height: auto; width: 100%;" src="assets/images/background-image-1.jpg"></div>
+        </div>
         <!-- This section will have picture samples of projects I have worked on and links to them. -->
         <section class="section-3">
             <h2 class="art-label" id="work">Work</h2>
@@ -121,7 +127,14 @@
                 <a href="https://www.linkedin.com/in/christina-stanczyk-a9a266222" target="_blank" rel="noreferrer noopener">LinkedIn</a>
             </section>
         </section>
+    
     </main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var parallax = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(parallax);
+  });
+</script>
 
 </body>
 
