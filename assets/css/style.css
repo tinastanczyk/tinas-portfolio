@@ -72,14 +72,17 @@ header h1{
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
+.nav{
+    background-color: transparent !important;
+}
 /* I'm changing the unordered list to align horizontally instead of vertically */
-header nav ul{
+/* header nav ul{
     display: flex;
     justify-content: flex-end;
     margin-top: 4rem;
     justify-content: center;
     margin-right: 2rem;
-}
+} */
 
 header nav ul li{
     /* removed the bullet points from the unordered list */
@@ -90,7 +93,7 @@ header nav ul li{
 header nav ul li a{
     /* removed the underline from the a tag links */
     display: block;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 150%;
     color: var(--white);
     margin: 1rem;
@@ -298,6 +301,10 @@ main section .articles #project-1 .p1-label{
         flex-direction: column;
         width: 100%;
         padding: 0;
+        margin-right: 13px;
+    }
+    nav{
+        display: flex;
     }
     main{
         max-height: fit-content;
@@ -314,6 +321,10 @@ main section .articles #project-1 .p1-label{
     header nav{
         margin-top: -5vw;
         margin-right: 32px;
+    }
+    .nav-wrapper{
+        justify-content: center;
+        align-self: center;
     }
     header nav ul {
         flex-direction: column;
@@ -456,6 +467,10 @@ main section .articles #project-1 .p1-label{
         max-height: 100%;
         height: 100vh;
         padding-top: 0vw;
+    }
+    .nav-wrapper{
+        justify-content: center;
+        align-items: center;
     }
     main section {
         grid-template-columns: auto;
